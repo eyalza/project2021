@@ -1,0 +1,63 @@
+<p *ngIf = "!(authService.getUser()| async)">Your are not logged in</p>
+<div>
+  <button mat-raised-button
+  color = "accent"
+  (click) = "addOwnerFormOPen = !addOwnerFormOPen"
+>
+Add Owners
+</button>
+</div>
+<div>
+  <ownerform *ngIf = "addOwnerFormOPen"
+    (update) = "add($event)"
+    (closeEdit) = "addOwnerFormOPen = false"
+    [formType] = "'Add owner'">    
+  </ownerform>
+</div>
+<mat-accordion *ngIf = "(authService.getUser()| async)">
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false"
+                         *ngFor = "let owner of owners;let i = index">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-bold>
+          Name:</mat-bold>
+          {{owner.fullName}}
+        </mat-panel-title>
+        <mat-panel-description>
+          <div>
+          <button mat-raised-button
+          color = "warn"
+          (click) = "deleteOwner(owner.id)">
+          Delete
+          </button>
+        </div>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p><mat-bold>Car ID:</mat-bold> {{owner.carId}}<p>
+      <p><mat-bold>Car Company:</mat-bold> {{owner.carCompany}}</p>
+      <p><mat-bold>Car Model:</mat-bold> {{owner.carModel}}</p>
+      <p><mat-bold>Car Year:</mat-bold> {{owner.carYear}}</p>
+      <button mat-raised-button
+      color = "accent"
+      (click) = "editstate[i] = !editstate[i]"
+  >
+    Edit
+  </button>    
+  <ownerform 
+    [hidden] = "!editstate[i]"
+    [fullName] = "owner.fullName"
+    [carId] = "owner.carId"
+    [carCompany] = "owner.carCompany"
+    [carModel] = "owner.carModel"
+    [carYear] = "owner.carYear"
+    [formType] = "'Edit owner'"
+    [id] = "owner.id"
+    (update) = "update($event);editstate[i] = !editstate[i]"
+    (closeEdit) = "editstate[i] = !editstate[i]"
+  >
+</ownerform>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  

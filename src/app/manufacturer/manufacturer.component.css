@@ -1,0 +1,13 @@
+.example-card {
+    max-width: 400px;
+    margin: 10px;
+    background-color:rgb(249, 239, 237);
+  }
+  
+  
+  .example-header-image {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/project2021-e649b.appspot.com/o/round2.png?alt=media&token=1023e8ec-9291-4fbd-9e9f-d3c0cdb09f8b');
+    background-size: cover;
+    background-color:rgb(249, 239, 237);
+  }
+  
