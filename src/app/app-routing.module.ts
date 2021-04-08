@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MakerFormComponent } from './maker-form/maker-form.component';
 import { ManufacturerComponent } from './manufacturer/manufacturer.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'ownerform', component: OwnerFormComponent},
   { path: 'manufacturer/:make', component: ManufacturerComponent }, 
   { path: 'maker', component: MakerFormComponent},
+  { path: 'home', component: HomeComponent},
     
 ];
 

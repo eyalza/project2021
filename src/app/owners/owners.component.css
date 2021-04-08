@@ -4,24 +4,42 @@
     text-align: left;
     margin-left: 8px;
     background-color:rgb(249, 239, 237);
+    align-items: center;
+    text-align: center;
 }
 
-
+.mat-first{
+    align-items: center;
+}
 
 mat-panel-description {
     width:4px;
     background-color:rgb(249, 239, 237);
+    align-items: center;
+    text-align: center;
 }
 
 mat-panel-title {
     text-align: center;
     width:30px;
     background-color:rgb(249, 239, 237);
+    align-items: center;
+    text-align: center;
 }
 mat-bold {
     font-weight:bold;
 }
 mat-expansion-panel {
     background-color:rgb(249, 239, 237);
+    font-size: large;
+    align-items: center;
+    text-align: center;
 }
+mat-accordion {
+    background-color:rgb(249, 239, 237);
+    font-size: large;
+    align-items: center;
+    text-align: center;
+}
+
 

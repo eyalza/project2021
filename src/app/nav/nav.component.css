@@ -25,6 +25,12 @@
   color:black;
 }
 
+.mat-nav-list{
+  align-items: center;
+  text-align: center;
+}
+
+
 
 .whitelink {
   color:black;

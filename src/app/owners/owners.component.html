@@ -1,5 +1,5 @@
 <p *ngIf = "!(authService.getUser()| async)">Your are not logged in</p>
-<div>
+<div class=mat-first>
   <button mat-raised-button
   color = "accent"
   (click) = "addOwnerFormOPen = !addOwnerFormOPen"
@@ -19,7 +19,7 @@ Add Owners
                          (closed)="panelOpenState = false"
                          *ngFor = "let owner of owners;let i = index">
       <mat-expansion-panel-header>
-        <mat-panel-title>
+        <mat-panel-title >
           <mat-bold>
           Name:</mat-bold>
           {{owner.fullName}}

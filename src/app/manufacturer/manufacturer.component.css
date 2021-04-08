@@ -3,6 +3,20 @@
     margin: 10px;
     background-color:rgb(249, 239, 237);
   }
+  mat-bold {
+    font-weight:bold;
+}
+
+mat-card-content{
+  font-size: large;
+}
+
+
+.tile-image {
+  width:140px;
+  border: 7px solid #ddd;
+
+}
   
   
   .example-header-image {

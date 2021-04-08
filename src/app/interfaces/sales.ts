@@ -1,3 +1,4 @@
 export interface Sales {
-    mfrName:string
+    mfrName:string,
+    makeid:number
 }

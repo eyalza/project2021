@@ -28,7 +28,8 @@ export class SaleService {
     
     private transformSalesData(data:SalesRaw):Sales{
       return {
-        mfrName:data.Results[0].Mfr_Name
+        mfrName:data.Results[0].Mfr_Name,
+        makeid:data.Results[0].Make_ID
       } 
     }
 

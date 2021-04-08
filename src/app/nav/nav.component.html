@@ -6,6 +6,17 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
+      <div>
+        <button mat-fab color="basic" [routerLink]="['/home']">
+          <mat-icon>home</mat-icon>
+        </button>
+      </div>
+        <div>
+        <button mat-button color = "basic" [routerLink]="['/owners']">Owners</button >
+        </div>
+        <div>
+          <button mat-button color = "basic" [routerLink]="['/manufacturer','Honda']">Manufacturer</button >
+          </div>
       <a mat-list-item routerLink="/owners" routerLinkActive="active">Owners</a>
       <a mat-list-item [routerLink]="['/manufacturer','Honda']" routerLinkActive="active">Manufacturer</a>
     </mat-nav-list>
