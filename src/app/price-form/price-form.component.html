@@ -1,0 +1,61 @@
+<mat-card>
+    <h1>Predicting the Car's Price</h1>
+    <form #priceForm = "ngForm">
+    <div>
+      <mat-form-field appearance="standard">
+          <mat-label>year</mat-label>
+          <input matInput [(ngModel)] = "year"
+          name = "year"
+          type = "year"
+          required>             
+        </mat-form-field>
+  </div>  
+        <div>
+            <mat-form-field appearance="standard">
+                <mat-label>mileage</mat-label>
+                <input matInput [(ngModel)] = "mileage"
+                name = "mileage"
+                type = "mileage"
+                required>             
+              </mat-form-field>
+        </div>  
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Car model</mat-label>
+                <mat-select place-holder = "model?" [(ngModel)] = "model" name = "model" required>
+                  <mat-option *ngFor="let model of arrModel" [value]="model">
+                    {{model}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>       
+        </div>
+        <div>
+          <mat-form-field appearance="fill">
+              <mat-label>Car transmission</mat-label>
+              <mat-select place-holder = "transmission?" [(ngModel)] = "transmission" name = "transmission" required>
+                <mat-option *ngFor="let transmission of arrTrans" [value]="transmission">
+                  {{transmission}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>       
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Car fuelType</mat-label>
+            <mat-select place-holder = "fuelType?" [(ngModel)] = "fuelType" name = "fuelType" required>
+              <mat-option *ngFor="let fuelType of arrFuel" [value]="fuelType">
+                {{fuelType}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>       
+    </div>
+        <div>
+            <button mat-raised-button color="primary" (click) = "predict()" *ngIf = "predictButton">
+                Predict
+            </button>
+        </div>
+        <p></p>
+        <h1>result:{{res}}</h1>
+        <p></p>
+    </form>
+</mat-card>

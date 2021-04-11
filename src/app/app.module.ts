@@ -18,6 +18,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import {MatGridListModule} from '@angular/material/grid-list';
 
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -36,6 +38,7 @@ import { OwnerFormComponent } from './owner-form/owner-form.component';
 import { ManufacturerComponent } from './manufacturer/manufacturer.component';
 import { MakerFormComponent } from './maker-form/maker-form.component';
 import { HomeComponent } from './home/home.component';
+import { PriceFormComponent } from './price-form/price-form.component';
 
 
 
@@ -53,6 +56,7 @@ import { HomeComponent } from './home/home.component';
     ManufacturerComponent,
     MakerFormComponent,
     HomeComponent,
+    PriceFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,7 +79,8 @@ import { HomeComponent } from './home/home.component';
     AngularFireAuthModule,
     AngularFirestoreModule,
     MatCheckboxModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

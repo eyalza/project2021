@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     this.auth.login(this.email,this.password).then(res => {
       console.log(res);
-      this.router.navigate(['/owners']); 
+      this.router.navigate(['/home']); 
     }).catch(
       err => {
         console.log(err);
