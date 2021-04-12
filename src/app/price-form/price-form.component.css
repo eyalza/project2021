@@ -1,7 +1,12 @@
+.mat-card{
+  background-color:rgb(249, 239, 237);
+}
+
 .example-radio-group {
     display: flex;
     flex-direction: column;
     margin: 15px 0;
+    background-color:rgb(249, 239, 237);
   }
   
   .example-radio-button {

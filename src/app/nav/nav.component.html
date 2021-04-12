@@ -1,5 +1,5 @@
 
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container class="sidenav-container" >
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
@@ -32,7 +32,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>project2021</span>
+      <span>Project 2021</span>
       <span class = "spacer"></span>
       <a class = "whitelink" routerLink = "/signup" *ngIf = "!(authService.getUser()|async)">Signup</a>
       <a class = "whitelink" routerLink = "/login" *ngIf = "!(authService.getUser()|async)">Login</a>
