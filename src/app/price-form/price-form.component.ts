@@ -14,8 +14,8 @@ export class PriceFormComponent implements OnInit {
   tax = 130;
   mpg = 55.5;
   engineSize = 2;
-  year=2020;
-  mileage=500;
+  year:number;
+  mileage:number;
   model:string;
   transmission:string;
   fuelType:string;
